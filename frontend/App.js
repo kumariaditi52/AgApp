@@ -10,6 +10,20 @@ const App = () => {
       <Text style={styles.text}>My First React Native App</Text>
       <Text style={styles.text}>My First React Native App</Text>
 
+
+      <Text style={styles.text}>My First React Native App</Text>
+      <Text style={styles.text}>My First React Native App</Text>
+
+      <Text style={styles.text}>My First React Native App</Text>
+      <Text style={styles.text}>My First React Native App</Text>
+
+
+      <Text style={styles.text}>My First React Native App</Text>
+      <Text style={styles.text}>My First React Native App</Text>
+
+      <Text style={styles.text}>My First React Native App</Text>
+      <Text style={styles.text}>My First React Native App</Text>
+
     </View>
   );
 };
