@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Switch } from 'react-native';
 
-const SettingsScreen = () => {
+const SettingsScreen = ({ darkMode, setDarkMode, themeStyles, navigateTo }) => {
   const [notifications, setNotifications] = React.useState(true);
-  const [darkMode, setDarkMode] = React.useState(false);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Settings</Text>
+    <View style={[styles.container, {backgroundColor: themeStyles.backgroundColor}]}>
+      <Text style={[styles.title, {color: themeStyles.textColor}]}>Settings</Text>
       
-      <View style={styles.settingItem}>
-        <Text style={styles.settingLabel}>Enable Notifications</Text>
+      <View style={[styles.settingItem, {backgroundColor: themeStyles.cardColor}]}>
+        <Text style={[styles.settingLabel, {color: themeStyles.textColor}]}>Enable Notifications</Text>
         <Switch
           value={notifications}
           onValueChange={setNotifications}
@@ -19,8 +18,8 @@ const SettingsScreen = () => {
         />
       </View>
       
-      <View style={styles.settingItem}>
-        <Text style={styles.settingLabel}>Dark Mode</Text>
+      <View style={[styles.settingItem, {backgroundColor: themeStyles.cardColor}]}>
+        <Text style={[styles.settingLabel, {color: themeStyles.textColor}]}>Dark Mode</Text>
         <Switch
           value={darkMode}
           onValueChange={setDarkMode}
@@ -29,12 +28,18 @@ const SettingsScreen = () => {
         />
       </View>
       
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Privacy Policy</Text>
+      <TouchableOpacity 
+        style={[styles.button, {backgroundColor: themeStyles.cardColor}]}
+        onPress={() => navigateTo('PrivacyPolicy')}
+      >
+        <Text style={[styles.buttonText, {color: themeStyles.textColor}]}>Privacy Policy</Text>
       </TouchableOpacity>
       
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Terms of Service</Text>
+      <TouchableOpacity 
+        style={[styles.button, {backgroundColor: themeStyles.cardColor}]}
+        onPress={() => navigateTo('TermsOfService')}
+      >
+        <Text style={[styles.buttonText, {color: themeStyles.textColor}]}>Terms of Service</Text>
       </TouchableOpacity>
       
       <TouchableOpacity style={[styles.button, styles.logoutButton]}>
