@@ -8,7 +8,7 @@
       const [farmer, setFarmer] = useState({
         id: '1',
         name: 'Rajesh Kumar',
-        phone: '+91 9876543210',
+        phone: '+91 0000000000',
         email: 'rajesh.kumar@example.com',
         location: 'Haryana, India',
         farmSize: '5 Acres',
